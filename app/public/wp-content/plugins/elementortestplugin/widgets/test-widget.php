@@ -16,7 +16,7 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 	}
 
 	public function get_categories() {
-		return ['general'];
+		return ['general','testcategory','sliders'];
 		// another way
 		// return array('general');
 	}
@@ -36,6 +36,17 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 				'label' => __( 'Type Something', 'elementortestplugin' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 				'placeholder' => __( 'Hello World', 'elementortestplugin' ),
+			]
+		);
+
+		$this->end_controls_section();
+
+
+		$this->start_controls_section(
+			'position_section',
+			[
+				'label' => __( 'Position', 'elementortestplugin' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
 		);
 

@@ -62,6 +62,18 @@ final class ElementorTestExtension {
 
 		add_action( 'elementor/widgets/widgets_registered', [ $this, 'init_widgets' ] );
 
+		add_action("elementor/elements/categories_registered",[$this, 'register_new_category']);
+	}
+
+	public function register_new_category($manager){
+		$manager->add_category('testcategory',[
+			'title' => __('Test Category','elementortestplugin'),
+			'icon' => 'fa fa-image',			
+		]);
+		$manager->add_category('sliders',[
+			'title' => __('Sliders','elementortestplugin'),
+			'icon' => 'fa fa-video',			
+		]);
 	}
 
 	public function init_widgets(){
