@@ -1,1 +1,21 @@
 [09-Nov-2019 06:51:30 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /app/public/wp-includes/update.php on line 384
+[10-Nov-2019 14:07:52 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /app/public/wp-admin/includes/plugin-install.php on line 180
+[10-Nov-2019 14:08:12 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /app/public/wp-admin/includes/plugin-install.php on line 180
+[10-Nov-2019 14:34:56 UTC] PHP Fatal error:  Uncaught Error: Class 'Elementor_Test_Extension' not found in /app/public/wp-content/plugins/elementortestplugin/elementortestplugin.php:123
+Stack trace:
+#0 /app/public/wp-admin/includes/plugin.php(641): include_once()
+#1 /app/public/wp-admin/plugins.php(44): activate_plugin('elementortestpl...', 'http://elemento...', false)
+#2 {main}
+  thrown in /app/public/wp-content/plugins/elementortestplugin/elementortestplugin.php on line 123
+[10-Nov-2019 14:35:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Elementor_Test_Extension' not found in /app/public/wp-content/plugins/elementortestplugin/elementortestplugin.php:123
+Stack trace:
+#0 /app/public/wp-admin/includes/plugin.php(2141): include()
+#1 /app/public/wp-admin/plugins.php(175): plugin_sandbox_scrape('elementortestpl...')
+#2 {main}
+  thrown in /app/public/wp-content/plugins/elementortestplugin/elementortestplugin.php on line 123
+[10-Nov-2019 14:35:18 UTC] PHP Fatal error:  Uncaught Error: Class 'Elementor_Test_Extension' not found in /app/public/wp-content/plugins/elementortestplugin/elementortestplugin.php:123
+Stack trace:
+#0 /app/public/wp-admin/includes/plugin.php(2141): include()
+#1 /app/public/wp-admin/plugins.php(175): plugin_sandbox_scrape('elementortestpl...')
+#2 {main}
+  thrown in /app/public/wp-content/plugins/elementortestplugin/elementortestplugin.php on line 123
