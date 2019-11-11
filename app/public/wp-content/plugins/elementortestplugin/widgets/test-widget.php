@@ -186,7 +186,15 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 	protected function _content_template() {
 		?>
 		<#
-			console.log(settings);
+			var image =  {
+				id:settings.imagex.id,
+				url:settings.imagex.url,
+				size:settings.imagesz_size,
+				dimension: settings.imgesz_custom_dimension
+			}
+
+			var imageUrl = elementor.imagesManager.getImageUrl(image);
+			console.log(imageUrl);
 		#>
 		<h1 class="heading">
 			{{{settings.heading}}}
