@@ -113,7 +113,7 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 				// 'placeholder' => __( 'Hello World', 'elementortestplugin' ),
 				'default' => '#222',
 				'selectors' => [
-					'{{WRAPPER}} h1.heading' => 'color: {{VALUE}}'
+					'{{WRAPPER}} h1.heading' => 'color: {{VALUE}}',
 				]
 			]
 		);
@@ -133,6 +133,45 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 
 
 		$this->end_controls_section();
+
+		$this->start_controls_section(
+			'padding_section',
+			[
+				'label' => __( 'Padding', 'elementortestplugin' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+			'heading_padding',
+			[
+				'label' => __( 'Heading padding', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', 'em', '%' ],
+				// 'placeholder' => __( 'Hello World', 'elementortestplugin' ),
+				// 'default' => '#222',
+				'selectors' => [
+					// '{{WRAPPER}} h1.heading' => 'padding: {{VALUE}}',
+					'{{WRAPPER}} h1.heading' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+				]
+			]
+		);
+
+		$this->add_control(
+			'description_padding',
+			[
+				'label' => __( 'Description padding', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', 'em', '%' ],
+				// 'placeholder' => __( 'Hello World', 'elementortestplugin' ),
+				// 'default' => '#222',
+				'selectors' => [
+					// '{{WRAPPER}} h1.heading' => 'padding: {{VALUE}}',
+					'{{WRAPPER}} p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+				]
+			]
+		);
+		$this->end_controls_section();
 	}
 
 	protected function render() {
@@ -144,5 +183,18 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 		echo "<p class='description'>".wp_kses_post($description)."</p>";
 	}
 
-	protected function _content_template() {}
+	protected function _content_template() {
+		?>
+		<#
+			console.log(settings);
+		#>
+		<h1 class="heading">
+			{{{settings.heading}}}
+		</h1>
+		<p class="description">
+			{{{settings.description}}}
+		</p>
+
+		<?php
+	}
 }

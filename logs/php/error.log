@@ -24,3 +24,13 @@ Stack trace:
 [11-Nov-2019 05:51:06 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /app/public/wp-includes/update.php on line 569
 [11-Nov-2019 07:31:16 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /app/public/wp-includes/update.php on line 160
 [11-Nov-2019 07:31:17 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /app/public/wp-includes/update.php on line 384
+[11-Nov-2019 18:00:15 UTC] PHP Fatal error:  Uncaught Error: Undefined class constant 'PADDING' in /app/public/wp-content/plugins/elementortestplugin/widgets/test-widget.php:149
+Stack trace:
+#0 /app/public/wp-content/plugins/elementor/includes/base/controls-stack.php(1879): Elementor_Test_Widget->_register_controls()
+#1 /app/public/wp-content/plugins/elementor/includes/base/controls-stack.php(487): Elementor\Controls_Stack->init_controls()
+#2 /app/public/wp-content/plugins/elementor/includes/base/widget-base.php(148): Elementor\Controls_Stack->get_stack()
+#3 /app/public/wp-content/plugins/elementor/includes/base/controls-stack.php(280): Elementor\Widget_Base->get_stack()
+#4 /app/public/wp-content/plugins/elementor/includes/base/controls-stack.php(1914): Elementor\Controls_Stack->get_controls()
+#5 /app/public/wp-content/plugins/elementor/includes/base/controls-stack.php(1022): Elementor\Controls_Stack->sanitize_settings(Array)
+#6 /app/public/wp-content/plugins/elementor/includes/base/element-base.php(665): Elementor\Controls_Stack->get_data()
+#7 /app/pub in /app/public/wp-content/plugins/elementortestplugin/widgets/test-widget.php on line 149
