@@ -1,3 +1,75 @@
 2019/11/14 07:06:36 Using in-memory storage
 2019/11/14 07:06:36 [SMTP] Binding to address: 0.0.0.0:1025
 2019/11/14 07:06:36 Serving under http://:1080/
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Starting session
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: INVALID] Started session, switching to ESTABLISH state
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Sent 35 bytes: '220 mailhog.example ESMTP MailHog\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Received 16 bytes: 'EHLO localhost\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: ESTABLISH] Processing line: EHLO localhost
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: ESTABLISH] In state 1, got command 'EHLO', args 'localhost'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: ESTABLISH] In ESTABLISH state
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: ESTABLISH] Got EHLO command, switching to MAIL state
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Sent 21 bytes: '250-Hello localhost\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Sent 16 bytes: '250-PIPELINING\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Sent 16 bytes: '250 AUTH PLAIN\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Received 35 bytes: 'MAIL FROM:<www-data@3815653d789f>\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: MAIL] Processing line: MAIL FROM:<www-data@3815653d789f>
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: MAIL] In state 6, got command 'MAIL', args 'FROM:<www-data@3815653d789f>'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: MAIL] In MAIL state
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: MAIL] Got MAIL command, switching to RCPT state
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Sent 37 bytes: '250 Sender www-data@3815653d789f ok\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Received 34 bytes: 'RCPT TO:<mailhog@flywheel.local>\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: RCPT] Processing line: RCPT TO:<mailhog@flywheel.local>
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: RCPT] In state 7, got command 'RCPT', args 'TO:<mailhog@flywheel.local>'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: RCPT] In RCPT state
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: RCPT] Got RCPT command
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Sent 41 bytes: '250 Recipient mailhog@flywheel.local ok\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Received 6 bytes: 'DATA\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: RCPT] Processing line: DATA
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: RCPT] In state 7, got command 'DATA', args ''
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: RCPT] In RCPT state
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: RCPT] Got DATA command, switching to DATA state
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Sent 37 bytes: '354 End data with <CR><LF>.<CR><LF>\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Received 1024 bytes: 'To: dev-email@flywheel.local\r\nSubject: [elementorpb] Your Site is Experiencing a Technical Issue\r\nX-PHP-Originating-Script: 1000:class-phpmailer.php\r\nDate: Thu, 14 Nov 2019 15:26:23 +0000\r\nFrom: WordPress <wordpress@elementorpb.local>\r\nMessage-ID: <6e807ebcc1c22da40eb022d2d3c5bf42@elementorpb.local>\r\nX-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\n\r\nHowdy!\r\n\r\nSince WordPress 5.2 there is a built-in feature that detects when a plugin or theme causes a fatal error on your site, and notifies you with this automated email.\r\n\r\nIn this case, WordPress caught an error with one of your plugins, Elementor Test Plugin.\r\n\r\nFirst, visit your website (http://elementorpb.local/) and check for any visible issues. Next, visit the page where the error was caught (http://elementorpb.local/wp-admin/post.php?post=6&action=elementor) and check for any visible issues.\r\n\r\nPlease contact your host for assistance with investigating this issue further.\r\n\r'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Received 712 bytes: '\nIf your site appears broken and you can't access your dashboard normally, WordPress now has a special "recovery mode". This lets you safely login to your dashboard and investigate further.\r\n\r\nhttp://elementorpb.local/wp-login.php?action=enter_recovery_mode&rm_token=jP9c9CykksosOQvpKDLYwH&rm_key=Aqva2HjqjD1eN6XJYdkFFL\r\n\r\nTo keep your site safe, this link will expire in 1 day. Don't worry about that, though: a new link will be emailed to you if the error occurs again after it expires.\r\n\r\n\r\n\r\nError Details\r\n=============\r\nAn error of type E_PARSE was caused in line 199 of the file /app/public/wp-content/plugins/elementortestplugin/widgets/test-widget.php. Error message: syntax error, unexpected '?'\r\n\r\n.\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: DATA] Got EOF, storing message and switching to MAIL state
+2019/11/14 15:26:24 Parsing Content from string: 'To: dev-email@flywheel.local
+Subject: [elementorpb] Your Site is Experiencing a Technical Issue
+X-PHP-Originating-Script: 1000:class-phpmailer.php
+Date: Thu, 14 Nov 2019 15:26:23 +0000
+From: WordPress <wordpress@elementorpb.local>
+Message-ID: <6e807ebcc1c22da40eb022d2d3c5bf42@elementorpb.local>
+X-Mailer: PHPMailer 5.2.22 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+
+Howdy!
+
+Since WordPress 5.2 there is a built-in feature that detects when a plugin or theme causes a fatal error on your site, and notifies you with this automated email.
+
+In this case, WordPress caught an error with one of your plugins, Elementor Test Plugin.
+
+First, visit your website (http://elementorpb.local/) and check for any visible issues. Next, visit the page where the error was caught (http://elementorpb.local/wp-admin/post.php?post=6&action=elementor) and check for any visible issues.
+
+Please contact your host for assistance with investigating this issue further.
+
+If your site appears broken and you can't access your dashboard normally, WordPress now has a special "recovery mode". This lets you safely login to your dashboard and investigate further.
+
+http://elementorpb.local/wp-login.php?action=enter_recovery_mode&rm_token=jP9c9CykksosOQvpKDLYwH&rm_key=Aqva2HjqjD1eN6XJYdkFFL
+
+To keep your site safe, this link will expire in 1 day. Don't worry about that, though: a new link will be emailed to you if the error occurs again after it expires.
+
+
+
+Error Details
+=============
+An error of type E_PARSE was caused in line 199 of the file /app/public/wp-content/plugins/elementortestplugin/widgets/test-widget.php. Error message: syntax error, unexpected '?'
+'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Storing message th0ujm8AYVQE6iWg96qAHkCape_lQkJsFAh2SETT4vw=@mailhog.example
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Sent 80 bytes: '250 Ok: queued as th0ujm8AYVQE6iWg96qAHkCape_lQkJsFAh2SETT4vw=@mailhog.example\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Received 6 bytes: 'QUIT\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: MAIL] Processing line: QUIT
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: MAIL] In state 6, got command 'QUIT', args ''
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] [PROTO: MAIL] Got QUIT verb, staying in MAIL state
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Sent 9 bytes: '221 Bye\r\n'
+2019/11/14 15:26:24 [SMTP 127.0.0.1:53840] Session ended

@@ -172,6 +172,33 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 			]
 		);
 		$this->end_controls_section();
+
+
+		$this->start_controls_section(
+			'image_section',
+			[
+				'label' => __( 'Image', 'elementortestplugin' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+			'imagex',
+			[
+				'label' => __( 'Image', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src()
+				]
+		]);
+		$this->add_group_control(
+			\Elementor\Group_Control_Image_Size::get_type(),
+			[
+				'default' => 'large',
+				'name' => 'imagesz'
+			]
+		);
+		$this->end_controls_section();
 	}
 
 	protected function render() {
@@ -193,6 +220,9 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 
 		echo "<h1 ". $this->get_render_attribute_string('heading') ." >".esc_html($heading)."</h1>";		
 		echo "<p ". $this->get_render_attribute_string('heading_description') ." >".wp_kses_post($description)."</p>";
+		// print_r($settings['image']);
+		// echo wp_get_attachment_image($settings['image']['id'],'medium'); 
+		echo \Elementor\Group_Control_Image_Size::get_attachment_image_html($settings,'imagesz', 'imagex' );
 	}
 
 	protected function _content_template() {
@@ -201,17 +231,28 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 		<#
 			view.addInlineEditingAttributes('heading','none');
 			view.addRenderAttribute('heading',{'class':'heading'});
-			
+		
 			view.addInlineEditingAttributes('heading_description','none');
 			view.addRenderAttribute('heading_description',{'class':'heading'});
-		#>
 
+			var image = {
+				id:settings.imagex.id,
+				url:settings.imagex.url,
+				size:settings.imagesz_size,
+				dimension: settings.imagesz_custom_dimension
+			}
+
+			var imageUrl = elementor.imagesManager.getImageUrl(image);
+			console.log(imageUrl);
+		#>
+		
 		<h1 {{{ view.getRenderAttributeString('heading') }}}> 
 			{{{settings.heading}}} 
 		</h1>
 		<p {{{ view.getRenderAttributeString('heading_description') }}}>
 			{{{settings.heading_description}}}
 		</p>
+		<img src="{{{imageUrl}}}" alt="">
 
 		<?php
 	}
