@@ -179,28 +179,38 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 		$heading = $settings['heading'];
 		$description = $settings['heading_description'];
 
-		echo "<h1 class='heading'>".esc_html($heading)."</h1>";
-		echo "<p class='description'>".wp_kses_post($description)."</p>";
+		// This two lines for heading
+		$this->add_inline_editing_attributes('heading','none');
+		$this->add_render_attribute('heading',[
+			'class' => 'heading'
+		]);
+
+		// This two lines for heading description
+		$this->add_inline_editing_attributes('heading_description','none');
+		$this->add_render_attribute('heading_description',[
+			'class' => 'description'
+		]);
+
+		echo "<h1 ". $this->get_render_attribute_string('heading') ." >".esc_html($heading)."</h1>";		
+		echo "<p ". $this->get_render_attribute_string('heading_description') ." >".wp_kses_post($description)."</p>";
 	}
 
 	protected function _content_template() {
 		?>
-		<#
-			var image =  {
-				id:settings.imagex.id,
-				url:settings.imagex.url,
-				size:settings.imagesz_size,
-				dimension: settings.imgesz_custom_dimension
-			}
 
-			var imageUrl = elementor.imagesManager.getImageUrl(image);
-			console.log(imageUrl);
+		<#
+			view.addInlineEditingAttributes('heading','none');
+			view.addRenderAttribute('heading',{'class':'heading'});
+			
+			view.addInlineEditingAttributes('heading_description','none');
+			view.addRenderAttribute('heading_description',{'class':'heading'});
 		#>
-		<h1 class="heading">
-			{{{settings.heading}}}
+
+		<h1 {{{ view.getRenderAttributeString('heading') }}}> 
+			{{{settings.heading}}} 
 		</h1>
-		<p class="description">
-			{{{settings.description}}}
+		<p {{{ view.getRenderAttributeString('heading_description') }}}>
+			{{{settings.heading_description}}}
 		</p>
 
 		<?php
