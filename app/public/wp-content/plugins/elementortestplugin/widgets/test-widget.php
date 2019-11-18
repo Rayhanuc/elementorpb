@@ -255,6 +255,21 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 			]
 
 		);
+
+		$this->add_control(
+			'demo_dimension',
+			[
+				'label' => __( 'Dimension', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::IMAGE_DIMENSIONS,
+				'description' => __( 'Input Width & Height', 'elementortestplugin' ),
+				'default' => [
+					'height' => 100,
+					'width' => 300
+				]
+			]
+
+		);
+
 		$this->end_controls_section();
 	}
 
@@ -286,6 +301,8 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 		print_r($countries);
 		echo "<br/>";
 		echo $settings['demo_choose'];
+		echo "<br/>";
+		print_r($settings['demo_dimension']);
 		echo "</div>";
 	}
 
@@ -326,6 +343,10 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 		</ul>
 		<div>
 			{{{ settings.demo_choose }}}
+		</div>
+		<div>
+			Width: {{{ settings.demo_dimension.width }}}<br/>
+			Height: {{{ settings.demo_dimension.height }}}
 		</div>
 		
 		<?php
