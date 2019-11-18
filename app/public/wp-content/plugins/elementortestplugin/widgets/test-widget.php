@@ -199,6 +199,34 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 			]
 		);
 		$this->end_controls_section();
+
+		
+		$this->start_controls_section(
+			'demo_section',
+			[
+				'label' => __( 'Control Demo', 'elementortestplugin' ),
+				'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		$this->add_control(
+			'demo_select2',
+			[
+				'label' => __( 'Select 2 Demo', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::SELECT2,
+				'multiple' => true,
+				'label_block' => true,
+				'options' => [
+					'BD'  => __( 'Bangladesh', 'elementortestplugin' ),
+					'BR' => __( 'Brazil', 'elementortestplugin' ),
+					'AR' => __( 'Argentina', 'elementortestplugin' ),
+					'AU' => __( 'Australia', 'elementortestplugin' ),
+					'DK' => __( 'Denmark', 'elementortestplugin' ),
+				],
+			]
+
+		);
+		$this->end_controls_section();
 	}
 
 	protected function render() {
@@ -223,6 +251,9 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 		// print_r($settings['image']);
 		// echo wp_get_attachment_image($settings['image']['id'],'medium'); 
 		echo \Elementor\Group_Control_Image_Size::get_attachment_image_html($settings,'imagesz', 'imagex' );
+		
+		$countries = $settings['demo_select2'];
+		print_r($countries);
 	}
 
 	protected function _content_template() {
@@ -253,7 +284,14 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 			{{{settings.heading_description}}}
 		</p>
 		<img src="{{{imageUrl}}}" alt="">
-
+		<ul>
+			<#
+				_.each(settings.demo_select2,function(country){ #>
+					<li>{{{ country }}}</li>
+				<# });
+			#>
+		</ul>
+		
 		<?php
 	}
 }
