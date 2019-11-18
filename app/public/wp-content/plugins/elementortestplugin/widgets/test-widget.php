@@ -226,6 +226,35 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 			]
 
 		);
+
+		$this->add_control(
+			'demo_choose',
+			[
+				'label' => __( 'Choose Demo', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::CHOOSE,
+				'label_block' => true,
+				'toggle' => false,
+				'options' => [
+					'left' => [
+						'title'  => __( 'Left', 'elementortestplugin' ),
+						'icon' => 'fa fa-align-left'
+					],
+					'center' => [
+						'title'  => __( 'Center', 'elementortestplugin' ),
+						'icon' => 'fa fa-align-center'
+					],
+					'right' => [
+						'title'  => __( 'Right', 'elementortestplugin' ),
+						'icon' => 'fa fa-align-right'
+					],
+					'justify' => [
+						'title'  => __( 'Justify', 'elementortestplugin' ),
+						'icon' => 'fa fa-align-justify'
+					]
+				],
+			]
+
+		);
 		$this->end_controls_section();
 	}
 
@@ -251,9 +280,13 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 		// print_r($settings['image']);
 		// echo wp_get_attachment_image($settings['image']['id'],'medium'); 
 		echo \Elementor\Group_Control_Image_Size::get_attachment_image_html($settings,'imagesz', 'imagex' );
-		
+
+		echo "<div>";
 		$countries = $settings['demo_select2'];
 		print_r($countries);
+		echo "<br/>";
+		echo $settings['demo_choose'];
+		echo "</div>";
 	}
 
 	protected function _content_template() {
@@ -291,6 +324,9 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 				<# });
 			#>
 		</ul>
+		<div>
+			{{{ settings.demo_choose }}}
+		</div>
 		
 		<?php
 	}
