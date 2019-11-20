@@ -314,7 +314,7 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 				'type' => \Elementor\Controls_Manager::POPOVER_TOGGLE,
 			]
 		);
-		
+
 
 		// Popover start ==========================
 		$this->start_popover();
@@ -349,9 +349,74 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 
 		$this->end_popover();
 		// Popover end ==========================
-
-
 		// Popover control end
+		
+
+		$this->add_control(
+			'demo_slider',
+			[
+				'label' => __( 'P1 Font Size', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px','%','rem'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 120,
+						'step' => 5
+					],
+					'%' => [
+						'min' => 0,
+						'max' => 200,
+						'step' => 10
+					],
+					'rem' => [
+						'min' => 0,
+						'max' => 200,
+						'step' => 10
+					]
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 60
+				],
+				'selectors' => [
+					'{{WRAPPER}} .p1' => 'font-size: {{SIZE}}{{UNIT}}'
+				]
+			]
+		);
+
+		$this->add_control(
+			'demo_slider2',
+			[
+				'label' => __( 'P2 Font Size', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px','%','rem'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 120,
+						'step' => 5
+					],
+					'%' => [
+						'min' => 0,
+						'max' => 200,
+						'step' => 10
+					],
+					'rem' => [
+						'min' => 0,
+						'max' => 200,
+						'step' => 10
+					]
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 60
+				],
+				'selectors' => [
+					'{{WRAPPER}} .p2' => 'font-size: {{SIZE}}{{UNIT}}'
+				]
+			]
+		);
 
 		$this->end_controls_section();
 	}
@@ -491,6 +556,9 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 
 		<p class="p2">
 			Eaque voluptatum deleniti eveniet non. Eveniet quisquam iste cumque asperiores, delectus veniam nobis est vel inventore, amet incidunt molestiae ullam minima. Sint eius qui blanditiis debitis fuga eligendi numquam maxime odio impedit saepe itaque atque eos officiis non minus, rem, perferendis, animi. Magni accusantium velit ullam. Ullam facere necessitatibus aliquam.
+		</p>
+		<p>
+			Size: {{{ settings.demo_slider.size }}} {{{ settings.demo_slider.unit }}}
 		</p>
 		<?php
 	}
