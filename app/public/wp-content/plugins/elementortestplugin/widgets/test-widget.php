@@ -279,6 +279,32 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 
 		);
 
+		$this->add_control(
+			'gallery',
+			[
+				'label' => __( 'Gallery Control', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::GALLERY,
+			]
+
+		);
+		// Icon control start
+		$this->add_control(
+			'demo_icon',
+			[
+				'label' => __( 'Icon Control', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::ICON,
+				'include' => [
+					'fa fa-facebook',
+					'fa fa-twitter',
+					'fa fa-github',
+					'fa fa-linkedin',
+				],
+				'default' => 'fa fa-twitter'
+			]
+
+		);
+		// Icon control end
+
 		$this->end_controls_section();
 	}
 
@@ -323,6 +349,11 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 			echo wp_get_attachment_image($gallery_image['id'],'thumbnail');
 		}
 		echo "</pre>";
+		echo "</div>";
+
+		// fontAwesome icon section show
+		echo "<div>";
+		echo "<i class='".$settings['demo_icon']."'></i>";
 		echo "</div>";
 	}
 
@@ -386,6 +417,10 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 		</div>
 		<!-- image gallery section end -->
 		
+		<!-- icon element section -->
+		<div>
+			<i class="{{{ settings.demo_icon }}}"></i>
+		</div>
 		<?php
 	}
 }
