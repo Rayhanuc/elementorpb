@@ -305,6 +305,20 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 		);
 		// Icon control end
 		
+
+		// Popover control start
+		$this->add_control(
+			'demo_popover',
+			[
+				'label' => __( 'Fonts Popover', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::POPOVER_TOGGLE,
+			]
+		);
+		
+
+		// Popover start ==========================
+		$this->start_popover();
+
 		// Paragrap1 Font control start
 		$this->add_control(
 			'demo_fotn_p1',
@@ -332,6 +346,12 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 			]
 		);
 		// Paragrap2 Font control end
+
+		$this->end_popover();
+		// Popover end ==========================
+
+
+		// Popover control end
 
 		$this->end_controls_section();
 	}
