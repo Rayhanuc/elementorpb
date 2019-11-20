@@ -304,6 +304,34 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 
 		);
 		// Icon control end
+		
+		// Paragrap1 Font control start
+		$this->add_control(
+			'demo_fotn_p1',
+			[
+				'label' => __( 'Font For P1', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::FONT,
+				'default' => "'Open Sans','sans-serif'",
+				'selectors' => [
+					'{{WRAPPER}} .p1' => 'font-family: {{VALUE}}'
+				]
+			]
+		);
+		// Paragrap1 Font control end
+		
+		// Paragrap2 Font control start
+		$this->add_control(
+			'demo_fotn_p2',
+			[
+				'label' => __( 'Font For P2', 'elementortestplugin' ),
+				'type' => \Elementor\Controls_Manager::FONT,
+				'default' => "'Open Sans','sans-serif'",
+				'selectors' => [
+					'{{WRAPPER}} .p2' => 'font-family: {{VALUE}}'
+				]
+			]
+		);
+		// Paragrap2 Font control end
 
 		$this->end_controls_section();
 	}
@@ -354,6 +382,20 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 		// fontAwesome icon section show
 		echo "<div>";
 		echo "<i class='".$settings['demo_icon']."'></i>";
+		echo "</div>";
+
+		// Font section
+		echo "<div>";
+		?>
+		<p class="p1">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis obcaecati ipsam odit non rerum deleniti laudantium accusantium explicabo consectetur quo.
+		</p>
+		<br/>
+
+		<p class="p2">
+			Eaque voluptatum deleniti eveniet non. Eveniet quisquam iste cumque asperiores, delectus veniam nobis est vel inventore, amet incidunt molestiae ullam minima. Sint eius qui blanditiis debitis fuga eligendi numquam maxime odio impedit saepe itaque atque eos officiis non minus, rem, perferendis, animi. Magni accusantium velit ullam. Ullam facere necessitatibus aliquam.
+		</p>
+		<?php
 		echo "</div>";
 	}
 
@@ -421,6 +463,15 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 		<div>
 			<i class="{{{ settings.demo_icon }}}"></i>
 		</div>
+
+		<p class="p1">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis obcaecati ipsam odit non rerum deleniti laudantium accusantium explicabo consectetur quo.
+		</p>
+		<br/>
+
+		<p class="p2">
+			Eaque voluptatum deleniti eveniet non. Eveniet quisquam iste cumque asperiores, delectus veniam nobis est vel inventore, amet incidunt molestiae ullam minima. Sint eius qui blanditiis debitis fuga eligendi numquam maxime odio impedit saepe itaque atque eos officiis non minus, rem, perferendis, animi. Magni accusantium velit ullam. Ullam facere necessitatibus aliquam.
+		</p>
 		<?php
 	}
 }
