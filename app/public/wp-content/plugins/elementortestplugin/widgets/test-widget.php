@@ -418,6 +418,19 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 			]
 		);
 
+		// Group control Paragrap3 Font start
+		$this->add_group_control(
+			\Elementor\Group_Control_typography::get_type(),
+			[
+				'label' => __( 'Typography for P3', 'elementortestplugin' ),
+				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
+				'default' => "'Open Sans','sans-serif'",
+				'selector' => '{{WRAPPER}} .p3',
+				// 'selector' => ['{{WRAPPER}} .p3','{{WRAPPER}} .p2']
+			]
+		);
+		// Group control Paragrap3 Font end
+
 		$this->end_controls_section();
 	}
 
@@ -479,6 +492,10 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 
 		<p class="p2">
 			Eaque voluptatum deleniti eveniet non. Eveniet quisquam iste cumque asperiores, delectus veniam nobis est vel inventore, amet incidunt molestiae ullam minima. Sint eius qui blanditiis debitis fuga eligendi numquam maxime odio impedit saepe itaque atque eos officiis non minus, rem, perferendis, animi. Magni accusantium velit ullam. Ullam facere necessitatibus aliquam.
+		</p>
+
+		<p class="p3">
+			Deleniti cum architecto mollitia illum ut quidem hic iste repudiandae aliquam, reiciendis natus, repellat corporis aut voluptatem cupiditate facilis accusamus et porro. Atque saepe repellat culpa provident laboriosam aliquid maxime minima nemo commodi sequi, quos similique consectetur, neque fuga, autem non vitae, eum obcaecati quibusdam qui hic nam voluptatem! Nulla est dolores totam soluta culpa, omnis neque!
 		</p>
 		<?php
 		echo "</div>";
@@ -556,6 +573,9 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 
 		<p class="p2">
 			Eaque voluptatum deleniti eveniet non. Eveniet quisquam iste cumque asperiores, delectus veniam nobis est vel inventore, amet incidunt molestiae ullam minima. Sint eius qui blanditiis debitis fuga eligendi numquam maxime odio impedit saepe itaque atque eos officiis non minus, rem, perferendis, animi. Magni accusantium velit ullam. Ullam facere necessitatibus aliquam.
+		</p>
+		<p class="p3">
+			Deleniti cum architecto mollitia illum ut quidem hic iste repudiandae aliquam, reiciendis natus, repellat corporis aut voluptatem cupiditate facilis accusamus et porro. Atque saepe repellat culpa provident laboriosam aliquid maxime minima nemo commodi sequi, quos similique consectetur, neque fuga, autem non vitae, eum obcaecati quibusdam qui hic nam voluptatem! Nulla est dolores totam soluta culpa, omnis neque!
 		</p>
 		<p>
 			Size: {{{ settings.demo_slider.size }}} {{{ settings.demo_slider.unit }}}

@@ -37,3 +37,7 @@
 [20-Nov-2019 03:56:17] NOTICE: ready to handle connections
 [20-Nov-2019 06:50:20] NOTICE: fpm is running, pid 95
 [20-Nov-2019 06:50:20] NOTICE: ready to handle connections
+[20-Nov-2019 20:19:15] NOTICE: Terminating ...
+[20-Nov-2019 20:19:15] NOTICE: exiting, bye-bye!
+[21-Nov-2019 09:40:32] NOTICE: fpm is running, pid 64
+[21-Nov-2019 09:40:33] NOTICE: ready to handle connections

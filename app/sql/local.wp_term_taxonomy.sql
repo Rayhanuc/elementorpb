@@ -32,4 +32,4 @@ INSERT INTO `wp_term_taxonomy` VALUES
 (28,28,"post_tag","",0,0),
 (29,29,"nav_menu","",0,0),
 (30,30,"nav_menu","",0,0),
-(31,31,"nav_menu","",0,2);
+(31,31,"nav_menu","",0,1);
