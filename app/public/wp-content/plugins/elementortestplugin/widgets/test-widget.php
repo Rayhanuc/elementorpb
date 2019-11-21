@@ -423,8 +423,20 @@ class Elementor_Test_Widget extends \Elementor\Widget_Base{
 			\Elementor\Group_Control_typography::get_type(),
 			[
 				'label' => __( 'Typography for P3', 'elementortestplugin' ),
+				'name' => 'demo_typography',
 				'scheme' => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
-				'default' => "'Open Sans','sans-serif'",
+				'selector' => '{{WRAPPER}} .p3',
+				// 'selector' => ['{{WRAPPER}} .p3','{{WRAPPER}} .p2']
+			]
+		);
+		// Group control Paragrap3 Font end
+
+		// Group control Text Shadow Font start
+		$this->add_group_control(
+			\Elementor\Group_Control_Text_Shadow::get_type(),
+			[
+				'label' => __( 'Text Shadow', 'elementortestplugin' ),
+				'name' => 'demo_ts',
 				'selector' => '{{WRAPPER}} .p3',
 				// 'selector' => ['{{WRAPPER}} .p3','{{WRAPPER}} .p2']
 			]
