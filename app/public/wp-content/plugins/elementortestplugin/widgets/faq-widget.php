@@ -73,10 +73,14 @@ class Elementor_Faq_Widget extends \Elementor\Widget_Base{
 
 	protected function render() {
 		$settings = $this->get_settings_for_display();
+
 		$faqs = $settings['faqs'];
 		if ($settings['faqs']) {
-			foreach ($faqs as $faq) {
-				echo "<h3>".$faq['title']."</h3>";
+			foreach ($faqs as $index=>$faq) {
+				$key_h = $this->get_repeater_setting_key("title","faqs",$index);
+
+				$this->add_inline_editing_attributes($key_h,'none');
+				echo "<h3 ".$this->get_render_attribute_string($key_h).">".$faq['title']."</h3>";
 				echo "<p>".$faq['description']."</p>";
 			}
 		}
@@ -87,9 +91,13 @@ class Elementor_Faq_Widget extends \Elementor\Widget_Base{
 
 		<#
 			if (settings.faqs.length) {
-				_.each(settings.faqs,function(faq){
+				_.each(settings.faqs,function(faq, index){
+
+					var key_h = view.getRepeaterSettingKey('title','faqs', index);
+					view.addInlineEditingAttributes(key_h,'none');
+
 					#>
-					<h2>{{{ faq.title }}}</h2>
+					<h2 {{{ view.getRenderAttributeString(key_h) }}}>{{{ faq.title }}}</h2>
 					<p>{{{ faq.description }}}</p>
 					<#
 				});

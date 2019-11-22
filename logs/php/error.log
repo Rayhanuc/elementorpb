@@ -86,3 +86,12 @@ Stack trace:
 #4 [internal function]: Elementor\Widgets_Manager->ajax_get_widget_types_controls_config(Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
 #5 /app/public/wp-content/plugins/elementor/core/common/modules/ajax/module.php(171): call_user_func(Array, Array, Object(Elementor\Core\Common\Modules\Ajax\Module))
 #6 /app/public/wp-includes/class-wp-hook.php(286): Elementor\Cor in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 32
+[22-Nov-2019 15:40:28 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
+[22-Nov-2019 15:40:28 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
+[22-Nov-2019 15:40:28 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
+[22-Nov-2019 16:28:00 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
+[22-Nov-2019 16:28:00 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
+[22-Nov-2019 16:28:00 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
+[22-Nov-2019 16:28:55 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
+[22-Nov-2019 16:28:55 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
+[22-Nov-2019 16:28:55 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
