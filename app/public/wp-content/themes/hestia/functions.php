@@ -182,3 +182,9 @@ function hestia_setup_theme() {
 	return;
 }
 
+
+// Change something my filter hook
+function my_pricing_prefix() {
+	return "BDT ";
+}
+add_filter('pricing_prefix','my_pricing_prefix');

@@ -95,3 +95,76 @@ Stack trace:
 [22-Nov-2019 16:28:55 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
 [22-Nov-2019 16:28:55 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
 [22-Nov-2019 16:28:55 UTC] PHP Warning:  Use of undefined constant none - assumed 'none' (this will throw an Error in a future version of PHP) in /app/public/wp-content/plugins/elementortestplugin/widgets/faq-widget.php on line 80
+[23-Nov-2019 14:52:52 UTC] PHP Parse error:  syntax error, unexpected '}' in /app/public/wp-content/plugins/elementortestplugin/elementortestplugin.php on line 73
+[23-Nov-2019 14:53:05 UTC] PHP Parse error:  syntax error, unexpected '}' in /app/public/wp-content/plugins/elementortestplugin/elementortestplugin.php on line 73
+[24-Nov-2019 09:50:38 UTC] PHP Fatal error:  Uncaught Error: Call to a member function get_settings() on null in /app/public/wp-content/plugins/elementortestplugin/widgets/pricing-widget.php:97
+Stack trace:
+#0 /app/public/wp-content/plugins/elementor/includes/base/widget-base.php(448): Elementor_Pricing_Widget->render()
+#1 /app/public/wp-content/plugins/elementor/includes/base/widget-base.php(561): Elementor\Widget_Base->render_content()
+#2 /app/public/wp-content/plugins/elementor/includes/base/element-base.php(670): Elementor\Widget_Base->get_raw_data(true)
+#3 /app/public/wp-content/plugins/elementor/includes/base/element-base.php(670): Elementor\Element_Base->get_raw_data(true)
+#4 /app/public/wp-content/plugins/elementor/core/base/document.php(697): Elementor\Element_Base->get_raw_data(true)
+#5 /app/public/wp-content/plugins/elementor/core/editor/editor.php(490): Elementor\Core\Base\Document->get_elements_raw_data(Array, true)
+#6 /app/public/wp-includes/class-wp-hook.php(286): Elementor\Core\Editor\Editor->enqueue_scripts('')
+#7 /app/public/wp-include in /app/public/wp-content/plugins/elementortestplugin/widgets/pricing-widget.php on line 97
+[24-Nov-2019 10:50:00 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:50:18 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:50:28 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:50:42 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:50:42 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:50:52 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:50:52 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:50:58 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:00 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:00 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:06 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:11 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:11 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:11 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:16 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:16 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:16 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:16 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:16 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:16 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:19 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:19 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:26 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:26 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:27 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:27 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:37 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:37 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:43 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:43 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:51:44 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:00 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:00 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:00 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:00 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:00 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:00 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:07 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:07 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:07 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:18 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:18 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:18 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:18 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:18 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:18 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:20 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:20 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:20 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:28 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:28 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:28 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:57 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:57 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:52:57 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:56:25 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:56:25 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:56:25 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:58:40 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:58:40 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[24-Nov-2019 10:58:40 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
