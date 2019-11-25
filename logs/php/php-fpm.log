@@ -55,3 +55,11 @@
 [24-Nov-2019 09:45:22] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
 [24-Nov-2019 10:50:40] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
 [24-Nov-2019 10:52:14] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[24-Nov-2019 19:12:19] NOTICE: Terminating ...
+[24-Nov-2019 19:12:19] NOTICE: exiting, bye-bye!
+[25-Nov-2019 11:18:12] NOTICE: fpm is running, pid 98
+[25-Nov-2019 11:18:12] NOTICE: ready to handle connections
+[25-Nov-2019 15:53:40] NOTICE: fpm is running, pid 96
+[25-Nov-2019 15:53:40] NOTICE: ready to handle connections
+[25-Nov-2019 16:34:57] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[25-Nov-2019 16:38:39] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it

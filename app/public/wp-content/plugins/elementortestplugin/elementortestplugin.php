@@ -67,9 +67,16 @@ final class ElementorTestExtension {
 
 		// Register Widget Styles
 		add_action( 'elementor/frontend/after_enqueue_styles', [ $this, 'widget_styles' ] );
+		add_action( 'elementor/editor/after_enqueue_scripts', [ $this, 'pricing_editor_assets' ] );
 		
 	}
 
+	// Elementor editor assets
+	function pricing_editor_assets(){
+		wp_enqueue_script("pricing-editor-js", plugins_url("/assets/js/main.js",__FILE__),array("jquery"),time(),true);
+	}
+
+	// frontend assets
 	function widget_styles(){
 		wp_enqueue_style("froala-css","//cdnjs.cloudflare.com/ajax/libs/froala-design-blocks/2.0.1/css/froala_blocks.min.css");
 	}

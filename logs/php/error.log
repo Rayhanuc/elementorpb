@@ -168,3 +168,4 @@ Stack trace:
 [24-Nov-2019 10:58:40 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
 [24-Nov-2019 10:58:40 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
 [24-Nov-2019 10:58:40 UTC] PHP Warning:  stripos() expects parameter 1 to be string, array given in /app/public/wp-includes/formatting.php on line 4200
+[25-Nov-2019 11:52:14 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in /app/public/wp-includes/update.php on line 160
