@@ -68,7 +68,14 @@ final class ElementorTestExtension {
 		// Register Widget Styles
 		add_action( 'elementor/frontend/after_enqueue_styles', [ $this, 'widget_styles' ] );
 		add_action( 'elementor/editor/after_enqueue_scripts', [ $this, 'pricing_editor_assets' ] );
+		add_action( 'elementor/frontend/after_enqueue_scripts', [ $this, 'progressbar_assets' ] );
 		
+	}
+
+	// progressbar_assets
+	function progressbar_assets(){
+		wp_enqueue_script("progressbar-js", plugins_url("/assets/js/progressbar-v1.1.0.min.js",__FILE__), null,time(),true);
+		wp_enqueue_script("progressbar-helper-js", plugins_url("/assets/js/scripts.js",__FILE__), null,time(),true);
 	}
 
 	// Elementor editor assets
@@ -97,11 +104,13 @@ final class ElementorTestExtension {
 		require_once( __DIR__ . '/widgets/test-widget.php' );
 		require_once( __DIR__ . '/widgets/faq-widget.php' );
 		require_once( __DIR__ . '/widgets/pricing-widget.php' );
+		require_once( __DIR__ . '/widgets/progressbar-widget.php' );
 
 		// Register widget
 		Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Test_Widget() );
 		Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Faq_Widget() );
 		Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Pricing_Widget() );
+		Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Progressbar_Widget() );
 	}
 
 

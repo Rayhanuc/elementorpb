@@ -63,3 +63,10 @@
 [25-Nov-2019 15:53:40] NOTICE: ready to handle connections
 [25-Nov-2019 16:34:57] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
 [25-Nov-2019 16:38:39] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[25-Nov-2019 17:03:39] NOTICE: Terminating ...
+[25-Nov-2019 17:03:39] NOTICE: exiting, bye-bye!
+[28-Nov-2019 13:14:15] NOTICE: fpm is running, pid 124
+[28-Nov-2019 13:14:15] NOTICE: ready to handle connections
+[28-Nov-2019 15:39:00] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[28-Nov-2019 16:03:57] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[28-Nov-2019 17:14:45] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
