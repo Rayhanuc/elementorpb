@@ -3,15 +3,18 @@
         elementorFrontend.hooks.addAction('frontend/element_ready/ProgressbarWidget.default',function($scope, ){
             $scope.find(".progress").each(function(){ 
                     var element = $(this)[0];
+                    var bar_color= $(this).data("bar_color");
+                    var bar_fill= $(this).data("bar_fill");
+                    var bar_height= $(this).data("bar_height");
                     if(element){
                     var bar = new ProgressBar.Line(element, {
                         strokeWidth: 4,
                         easing: 'easeInOut',
                         duration: 1400,
-                        color: '#FFEA82',
+                        color: bar_color,
                         trailColor: '#eee',
                         trailWidth: 1,
-                        svgStyle: {width: '95%', height: '10px'},
+                        svgStyle: {width: '95%', height: bar_height},
                         text: {
                             style: {
                               // Text color.
@@ -31,7 +34,7 @@
                         }
                     });
                         
-                    bar.animate(0.8);  // Number from 0.0 to 1.0
+                    bar.animate(bar_fill);  // Number from 0.0 to 1.0
                 }
 
             });
