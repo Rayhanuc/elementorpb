@@ -86,6 +86,7 @@ final class ElementorTestExtension {
 	// frontend assets
 	function widget_styles(){
 		wp_enqueue_style("froala-css","//cdnjs.cloudflare.com/ajax/libs/froala-design-blocks/2.0.1/css/froala_blocks.min.css");
+		wp_enqueue_style("infobox-css",plugins_url("/assets/css/infobox.css",__FILE__));
 	}
 
 	public function register_new_category($manager){
@@ -105,12 +106,14 @@ final class ElementorTestExtension {
 		require_once( __DIR__ . '/widgets/faq-widget.php' );
 		require_once( __DIR__ . '/widgets/pricing-widget.php' );
 		require_once( __DIR__ . '/widgets/progressbar-widget.php' );
+		require_once( __DIR__ . '/widgets/infobox-widget.php' );
 
 		// Register widget
 		Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Test_Widget() );
 		Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Faq_Widget() );
 		Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Pricing_Widget() );
 		Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Progressbar_Widget() );
+		Plugin::instance()->widgets_manager->register_widget_type( new \Elementor_Infobox_Widget() );
 	}
 
 

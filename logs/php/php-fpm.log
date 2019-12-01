@@ -70,3 +70,6 @@
 [28-Nov-2019 15:39:00] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
 [28-Nov-2019 16:03:57] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
 [28-Nov-2019 17:14:45] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[01-Dec-2019 13:57:33] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[01-Dec-2019 15:50:27] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[01-Dec-2019 15:51:01] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
