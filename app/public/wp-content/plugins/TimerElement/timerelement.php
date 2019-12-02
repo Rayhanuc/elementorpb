@@ -81,6 +81,7 @@ final class TimerElementExtension {
 
 	function frontend_assets_styles() {
 		wp_enqueue_style("flipclock-css",plugins_url("/assets/css/flipclock.css",__FILE__));
+		wp_enqueue_style("style-css",plugins_url("/assets/css/style.css",__FILE__));
 	}
 
 

@@ -26,7 +26,7 @@ class Elementor_Timer_Widget extends \Elementor\Widget_Base {
 			]
 		);
 
-		$this->add_control( 'display_type', [
+		/* $this->add_control( 'display_type', [
 			'label'   => __( 'Display Type', 'timerelement' ),
 			'type'    => \Elementor\Controls_Manager::SELECT,
 			'options' => [
@@ -48,7 +48,7 @@ class Elementor_Timer_Widget extends \Elementor\Widget_Base {
 			'condition' => [
 				'display_type' => 'clock'
 			]
-		] );
+		] ); */
 
 
 		$this->end_controls_section();
@@ -56,14 +56,15 @@ class Elementor_Timer_Widget extends \Elementor\Widget_Base {
 	}
 
 	protected function render() {
-		$settings = $this->get_settings_for_display();
-		$display_type = $this->get_settings('display_type');
-		$clock_format = $this->get_settings('clock_format');
+        $settings = $this->get_settings_for_display();
+        echo "Hello";
+		/* $display_type = $this->get_settings('display_type');
+		$clock_format = $this->get_settings('clock_format'); */
 		?>
-        <div class="clock"
-             data-display-type="<?php echo $display_type ?>"
-             data-clock-format="<?php echo $clock_format ?>"
-        ></div>
+        <!-- <div class="clock"
+             data-display-type="<?php //echo $display_type ?>"
+             data-clock-format="<?php //echo $clock_format ?>"
+        ></div> -->
 		<?php
 	}
 
