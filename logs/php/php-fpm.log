@@ -77,3 +77,12 @@
 [01-Dec-2019 16:43:00] NOTICE: exiting, bye-bye!
 [02-Dec-2019 14:34:12] NOTICE: fpm is running, pid 139
 [02-Dec-2019 14:34:12] NOTICE: ready to handle connections
+[02-Dec-2019 16:50:09] NOTICE: Terminating ...
+[02-Dec-2019 16:50:09] NOTICE: exiting, bye-bye!
+[03-Dec-2019 05:26:11] NOTICE: fpm is running, pid 143
+[03-Dec-2019 05:26:11] NOTICE: ready to handle connections
+[03-Dec-2019 05:29:10] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[03-Dec-2019 05:56:37] NOTICE: Terminating ...
+[03-Dec-2019 05:56:37] NOTICE: exiting, bye-bye!
+[03-Dec-2019 06:08:48] NOTICE: fpm is running, pid 148
+[03-Dec-2019 06:08:48] NOTICE: ready to handle connections
