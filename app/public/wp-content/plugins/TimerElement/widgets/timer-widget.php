@@ -24,7 +24,74 @@ class Elementor_Timer_Widget extends \Elementor\Widget_Base {
 				'label' => __( 'Content', 'timerelement' ),
 				'tab'   => \Elementor\Controls_Manager::TAB_CONTENT,
 			]
-		);
+        );
+        
+        $this->add_control(
+            'display_type',
+            [
+                'label' => __( 'Display Type', 'timerelement' ),
+                'type'  => \Elementor\Controls_Manager::SELECT,
+                'options' => [
+                    'clock' => __( 'Clock', 'timerelement' ),
+                    'timerc' => __( 'Time CountDown', 'timerelement' ),
+                    'genericc' => __( 'Normal CountDown', 'timerelement' ),
+                ],
+                'default' =>'clock',
+            ]
+        );
+        
+        $this->add_control(
+            'clock_format',
+            [
+                'label' => __( 'Clock Format', 'timerelement' ),
+                'type'  => \Elementor\Controls_Manager::SELECT,
+                'options' => [
+                    '12' => __( '12 Hour', 'timerelement' ),
+                    '24' => __( '24 Hour', 'timerelement' ),
+                ],
+                'default'  => '12',
+                'condition' => [
+                    'display_type' => 'clock'
+                ]
+            ]
+        );
+        
+        $this->add_control(
+            'target_clock_time',
+            [
+                'label' => __( 'Target Time', 'timerelement' ),
+                'type'  => \Elementor\Controls_Manager::DATE_TIME,
+                'condition' => [
+                    'display_type' => 'timerc'
+                ],
+                'label_block'  => false,
+            ]
+        );
+        
+        $this->add_control(
+            'generic_countdown',
+            [
+                'label' => __( 'Countdown From', 'timerelement' ),
+                'type'  => \Elementor\Controls_Manager::NUMBER,
+                'condition' => [
+                    'display_type' => 'genericc'
+                ],
+                'label_block'  => false,
+            ]
+        );
+        
+        $this->add_control(
+            'decrement',
+            [
+                'label' => __( 'Decrease By (milliseconds)', 'timerelement' ),
+                'type'  => \Elementor\Controls_Manager::NUMBER,
+                'condition' => [
+                    'display_type' => 'genericc'
+                ],
+                'label_block'  => false,
+                'default'   => 1000
+            ]
+        );
 
 
 		$this->end_controls_section();
@@ -33,9 +100,19 @@ class Elementor_Timer_Widget extends \Elementor\Widget_Base {
 
 	protected function render() {
         $settings = $this->get_settings_for_display();
-        
+        $display_type = $this->get_settings('display_type');
+        $clock_format = $this->get_settings('clock_format');
+        $target_time = $this->get_settings('target_clock_time');
+        $countdown = $this->get_settings('generic_countdown');
+        $decrement = $this->get_settings('decrement');
 		?>
-        <div class="clock"></div>
+        <div class="clock" 
+        data-display-type="<?php echo esc_attr($display_type)?>"
+        data-clock-format="<?php echo esc_attr($clock_format)?>"
+        data-target-time="<?php echo esc_attr($target_time)?>"
+        data-countdown="<?php echo esc_attr($countdown)?>"
+        data-decrement="<?php echo esc_attr($decrement)?>"
+        ></div>
 		<?php
 	}
 
