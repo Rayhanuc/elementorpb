@@ -100,3 +100,7 @@
 [12-Jan-2020 19:03:26] NOTICE: exiting, bye-bye!
 [16-Jan-2020 09:06:05] NOTICE: fpm is running, pid 95
 [16-Jan-2020 09:06:05] NOTICE: ready to handle connections
+[17-Jan-2020 18:42:31] NOTICE: Terminating ...
+[17-Jan-2020 18:42:31] NOTICE: exiting, bye-bye!
+[18-Jan-2020 13:35:03] NOTICE: fpm is running, pid 102
+[18-Jan-2020 13:35:03] NOTICE: ready to handle connections
