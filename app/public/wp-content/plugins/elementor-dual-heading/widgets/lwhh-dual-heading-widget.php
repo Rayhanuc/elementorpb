@@ -202,7 +202,7 @@ class LWHH_Dual_Heading_Widget extends \Elementor\Widget_Base {
 	 */
 	protected function render() {
 
-		$settings   = $this->get_settings_for_display(); //and echo $settings['dummy_text']
+		// $settings   = $this->get_settings_for_display(); //and echo $settings['dummy_text']
 		// Heading One
 		$heading_one = $this->get_settings( 'heading_one' );
 		$this->add_render_attribute( 'heading_one', 'class', 'heading_one' );
@@ -216,7 +216,7 @@ class LWHH_Dual_Heading_Widget extends \Elementor\Widget_Base {
         <h1>
         	<span <?php echo $this->get_render_attribute_string( 'heading_one' ) ?>> <?php echo esc_html( $heading_one ); ?>
         	</span>
-        	
+
         	<span <?php echo $this->get_render_attribute_string( 'heading_two' ) ?>> <?php echo esc_html( $heading_two ); ?>
         	</span>
         </h1>
@@ -233,12 +233,22 @@ class LWHH_Dual_Heading_Widget extends \Elementor\Widget_Base {
 	 * @since 1.0.0
 	 * @access protected
 	 */
-	/*protected function _content_template() {
-		$this->add_render_attribute( 'dummy_text', 'class', 'dummy_text' );
-		$this->add_inline_editing_attributes( 'dummy_text', 'none' );
+	protected function _content_template() {
+		$this->add_render_attribute( 'heading_one', 'class', 'heading_one' );
+		$this->add_inline_editing_attributes( 'heading_one' );
+
+		$this->add_render_attribute( 'heading_two', 'class', 'heading_two' );
+		$this->add_inline_editing_attributes( 'heading_two' );
+
 		?>
-        <div <?php echo $this->get_render_attribute_string( 'dummy_text' ) ?>> {{ settings.dummy_text }}</div>
+        <h1>
+        	<span <?php echo $this->get_render_attribute_string( 'heading_one' ) ?>> {{ settings.heading_one }}
+        	</span>
+
+        	<span <?php echo $this->get_render_attribute_string( 'heading_two' ) ?>> {{ settings.heading_two }}
+        	</span>
+        </h1>
 		<?php
-	}*/
+	}
 
 }
