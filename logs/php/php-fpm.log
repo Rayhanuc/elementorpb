@@ -108,3 +108,5 @@
 [22-Jan-2020 19:29:25] NOTICE: exiting, bye-bye!
 [23-Jan-2020 06:37:21] NOTICE: fpm is running, pid 119
 [23-Jan-2020 06:37:21] NOTICE: ready to handle connections
+[25-Jan-2020 17:37:46] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[25-Jan-2020 17:38:47] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it

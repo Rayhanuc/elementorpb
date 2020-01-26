@@ -92,13 +92,32 @@ class LWHH_Protected_Content_Widget extends \Elementor\Widget_Base {
 		);
 
 		$this->add_control(
-			'dummy_text',
+			'password',
 			[
-				'label'       => __( 'Dummy Text', 'lwhhpc' ),
+				'label'       => __( 'Password', 'lwhhpc' ),
 				'type'        => \Elementor\Controls_Manager::TEXT,
 				'input_type'  => 'text',
-				'placeholder' => __( 'Some Dummy Text', 'lwhhpc' ),
-				'default'     => __( 'Elementor Protected Content', 'lwhhpc' ),
+				'placeholder' => __( 'Password', 'lwhhpc' ),
+			]
+		);
+
+		$this->add_control(
+			'message',
+			[
+				'label'       => __( 'Message', 'lwhhpc' ),
+				'type'        => \Elementor\Controls_Manager::TEXT,
+				'input_type'  => 'text',
+				'placeholder' => __( 'Non Protected Message', 'lwhhpc' ),
+			]
+		);
+
+		$this->add_control(
+			'protected_message',
+			[
+				'label'       => __( 'Protected Message', 'lwhhpc' ),
+				'type'        => \Elementor\Controls_Manager::TEXT,
+				'input_type'  => 'text',
+				'placeholder' => __( 'Protected Message', 'lwhhpc' ),
 			]
 		);
 
@@ -130,7 +149,7 @@ class LWHH_Protected_Content_Widget extends \Elementor\Widget_Base {
 				'type'      => \Elementor\Controls_Manager::COLOR,
 				'default'   => '#ff0000',
 				'selectors' => [
-					'{{WRAPPER}} .dummy_text' => 'color: {{VALUE}}'
+					'{{WRAPPER}} .message' => 'color: {{VALUE}}'
 				]
 			]
 		);
@@ -141,7 +160,7 @@ class LWHH_Protected_Content_Widget extends \Elementor\Widget_Base {
 				'name'     => 'content_typography',
 				'label'    => __( 'Typography', 'lwhhpc' ),
 				'scheme'   => \Elementor\Scheme_Typography::TYPOGRAPHY_1,
-				'selector' => '{{WRAPPER}} .dummy_text',
+				'selector' => '{{WRAPPER}} .message',
 			]
 		);
 
@@ -160,11 +179,21 @@ class LWHH_Protected_Content_Widget extends \Elementor\Widget_Base {
 	protected function render() {
 
 		$settings   = $this->get_settings_for_display(); //and echo $settings['dummy_text']
-		$dummy_text = $this->get_settings( 'dummy_text' );
-		$this->add_render_attribute( 'dummy_text', 'class', 'dummy_text' );
-		$this->add_inline_editing_attributes( 'dummy_text' );
+		$message = $this->get_settings( 'message' );
+		$password = $this->get_settings( 'password' );
+		$protected_message = $this->get_settings( 'protected_message' );
+		$this->add_render_attribute( 'message', 'class', 'dummy_text' );
+		$this->add_inline_editing_attributes( 'message' );
 		?>
-        <div <?php echo $this->get_render_attribute_string( 'dummy_text' ) ?>> <?php echo esc_html( $dummy_text ); ?></div>
+        <p <?php echo $this->get_render_attribute_string( 'message' ) ?>> <?php echo esc_html( $message ); ?></p>
+        <div>
+        	<form action="<?php the_permalink(); ?>" method="POST">
+        		<input type="hidden" name="p" value="<?php echo md5($password); ?>">
+        		<label>Input Password</label><br/>
+        		<input type="password" name="passwrd"><br/>
+        		<button type="submit">Submit</button>
+        	</form>
+        </div>
 		<?php
 
 
@@ -178,7 +207,7 @@ class LWHH_Protected_Content_Widget extends \Elementor\Widget_Base {
 	 * @since 1.0.0
 	 * @access protected
 	 */
-	protected function _content_template() {
+	protected function _content_template_() {
 		$this->add_render_attribute( 'dummy_text', 'class', 'dummy_text' );
 		$this->add_inline_editing_attributes( 'dummy_text', 'none' );
 		?>
