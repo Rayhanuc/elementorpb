@@ -110,3 +110,16 @@
 [23-Jan-2020 06:37:21] NOTICE: ready to handle connections
 [25-Jan-2020 17:37:46] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
 [25-Jan-2020 17:38:47] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[26-Jan-2020 15:16:50] NOTICE: Terminating ...
+[26-Jan-2020 15:16:50] NOTICE: exiting, bye-bye!
+[27-Jan-2020 04:30:05] NOTICE: fpm is running, pid 91
+[27-Jan-2020 04:30:05] NOTICE: ready to handle connections
+[27-Jan-2020 17:57:39] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[28-Jan-2020 16:12:46] NOTICE: Terminating ...
+[28-Jan-2020 16:12:46] NOTICE: exiting, bye-bye!
+[02-Feb-2020 13:46:29] NOTICE: fpm is running, pid 141
+[02-Feb-2020 13:46:29] NOTICE: ready to handle connections
+[02-Feb-2020 14:31:26] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it
+[03-Feb-2020 05:29:33] NOTICE: fpm is running, pid 97
+[03-Feb-2020 05:29:33] NOTICE: ready to handle connections
+[03-Feb-2020 05:57:34] WARNING: [pool www] server reached pm.max_children setting (5), consider raising it

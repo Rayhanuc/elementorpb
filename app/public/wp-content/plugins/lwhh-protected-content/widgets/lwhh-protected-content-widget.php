@@ -105,7 +105,7 @@ class LWHH_Protected_Content_Widget extends \Elementor\Widget_Base {
 			'message',
 			[
 				'label'       => __( 'Message', 'lwhhpc' ),
-				'type'        => \Elementor\Controls_Manager::TEXT,
+				'type'        => \Elementor\Controls_Manager::TEXTAREA,
 				'input_type'  => 'text',
 				'placeholder' => __( 'Non Protected Message', 'lwhhpc' ),
 			]
@@ -115,7 +115,7 @@ class LWHH_Protected_Content_Widget extends \Elementor\Widget_Base {
 			'protected_message',
 			[
 				'label'       => __( 'Protected Message', 'lwhhpc' ),
-				'type'        => \Elementor\Controls_Manager::TEXT,
+				'type'        => \Elementor\Controls_Manager::TEXTAREA,
 				'input_type'  => 'text',
 				'placeholder' => __( 'Protected Message', 'lwhhpc' ),
 			]
@@ -182,19 +182,37 @@ class LWHH_Protected_Content_Widget extends \Elementor\Widget_Base {
 		$message = $this->get_settings( 'message' );
 		$password = $this->get_settings( 'password' );
 		$protected_message = $this->get_settings( 'protected_message' );
-		$this->add_render_attribute( 'message', 'class', 'dummy_text' );
+		$this->add_render_attribute( 'message', 'class', 'message' );
 		$this->add_inline_editing_attributes( 'message' );
-		?>
-        <p <?php echo $this->get_render_attribute_string( 'message' ) ?>> <?php echo esc_html( $message ); ?></p>
-        <div>
-        	<form action="<?php the_permalink(); ?>" method="POST">
-        		<input type="hidden" name="p" value="<?php echo md5($password); ?>">
-        		<label>Input Password</label><br/>
-        		<input type="password" name="passwrd"><br/>
-        		<button type="submit">Submit</button>
-        	</form>
-        </div>
-		<?php
+
+		if (!isset($_POST['submit'])) {
+		
+			?>
+	        <p <?php echo $this->get_render_attribute_string( 'message' ) ?>> <?php echo esc_html( $message ); ?></p>
+	        <div>
+	        	<form action="<?php the_permalink(); ?>" method="POST">
+	        		<input type="hidden" name="ph" value="<?php echo md5($password); ?>">
+	        		<label>Input Password</label><br/>
+	        		<input type="password" name="passwrd"><br/>
+	        		<button type="submit" name="submit">Submit</button>
+	        	</form>
+	        </div>
+			<?php
+		}else {
+			if (isset($_POST['passwrd']) && $_POST['passwrd']!='') {
+				$hash = $_POST['ph'];
+				$passwrd = $_POST['passwrd'];
+				if($hash == md5($passwrd)){
+					?>
+					<p><?php echo $protected_message; ?></p>
+					<?php
+				}else {
+					?>
+					<p>Password Didn't Match</p>
+					<?php
+				}
+			}
+		}
 
 
 	}
